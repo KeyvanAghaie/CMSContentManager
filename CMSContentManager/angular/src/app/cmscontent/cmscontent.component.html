@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col col-md-6">
+        <h5 class="card-title">{{ 'CMS Contents' }}</h5>
+      </div>
+      <div class="text-end col col-md-6">
+
+        <!-- Add the "new book" button here -->
+        <div class="text-lg-end pt-2">
+          <button id="create" class="btn btn-primary" type="button" (click)="createContent()">
+            <i class="fa fa-plus me-1"></i>
+            <span>{{ "New Page" }}</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <!-- ngx-datatable should be here! -->
+  </div>
+</div>
+
+<!-- Add the modal here -->
+<abp-modal [(visible)]="isModalOpen">
+  <ng-template #abpHeader>
+    <h3>{{ 'New Content Page' }}</h3>
+  </ng-template>
+
+  <ng-template #abpBody>
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <div class="mt-2">
+        <label for="content-title">Title</label><span> * </span>
+        <input type="text" id="content-title" class="form-control" formControlName="title" autofocus />
+      </div>
+
+      <div class="mt-2">
+        <label for="cms-content">Content</label><span> * </span>
+        <textarea rows="8" maxlength="1000" id="cms-content" class="form-control" formControlName="content"></textarea>
+      </div>
+
+    </form>
+    <br />
+
+  </ng-template>
+
+
+
+  <ng-template #abpFooter>
+    <button type="button" class="btn btn-secondary" abpClose>
+      {{ 'Close' }}
+    </button>
+
+    <!--added save button-->
+    <!--  -->
+    <button class="btn btn-primary" (click)="save()" [disabled]="form.invalid">
+      <i class="fa fa-check mr-1"></i>
+      {{ 'Save' }}
+    </button>
+  </ng-template>
+</abp-modal>

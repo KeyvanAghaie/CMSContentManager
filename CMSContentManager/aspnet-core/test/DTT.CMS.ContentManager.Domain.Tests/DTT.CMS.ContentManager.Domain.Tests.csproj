@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>DTT.CMS.ContentManager</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DTT.CMS.ContentManager.Domain\DTT.CMS.ContentManager.Domain.csproj" />
+    <ProjectReference Include="..\DTT.CMS.ContentManager.TestBase\DTT.CMS.ContentManager.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>
