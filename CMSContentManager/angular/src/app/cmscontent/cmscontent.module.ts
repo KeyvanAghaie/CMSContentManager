@@ -5,6 +5,7 @@ import { CMSContentRoutingModule } from './cmscontent-routing.module';
 import { CMSContentComponent } from './cmscontent.component';
 import { ThemeSharedModule } from '@abp/ng.theme.shared';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ThemeSharedModule,
     CMSContentRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EditorModule
   ]
 })
 export class CMSContentModule { }

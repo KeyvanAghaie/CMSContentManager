@@ -16,18 +16,19 @@ function configureRoutes(routesService: RoutesService) {
         layout: eLayoutType.application,
       },
       {
+        path: '/CMSContents',
+        name: '::Add New Page',
+        iconClass: 'fas fa-plus',
+        layout: eLayoutType.application,
+      } ,
+      {
         path: '/CMS-Content',
-        name: '::CMSContents',
-        iconClass: 'fas fa-content',
+        name: '::CMS Content Pages',
+        iconClass: 'fas fa-paper',
         order: 2,
         layout: eLayoutType.application,
       },
-      {
-        path: '/CMSContents',
-        name: '::Contents',
-        parentName: '::CMSContents',
-        layout: eLayoutType.application,
-      } 
+      
       
     ]);
   };

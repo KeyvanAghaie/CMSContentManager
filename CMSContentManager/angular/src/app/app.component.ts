@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
           {
             name: it.title,
             path: `/CMSContents/${it.id}/view`,
-            parentName: '::CMSContents',
+            parentName: '::CMS Content Pages',
             order,
             layout: eLayoutType.application,
           }]
